@@ -31,7 +31,7 @@ Secure & Private: Use your own local or private LLM instance, ensuring your prop
 
 Familiar Workflow: Built directly on the standard Python Debugger (pdb.Pdb), preserving muscle memory for Python developers.
 
-| Feature | Description | Implementation Details (from `ai_debugger.py`) |
+| Feature | Description | Implementation Details (from `cognitrace.py`) |
 | :--- | :--- | :--- |
 | **PDB Extension** | Inherits all standard Python debugging commands (n, s, c, b) | Extends `pdb.Pdb` |
 | **LLM Interaction** | Dedicated command to pose questions to the LLM | Implements the `do_ai` command |
@@ -48,8 +48,7 @@ Use `handle_crash()` inside a top-level `try...except` block to automatically la
 **Example Script (`app_with_crash_handler.py`):**
 
 ```python
-# Assuming 'ai_debugger.py' is in your Python path
-from ai_debugger import handle_crash
+from cognitrace import handle_crash
 import sys
 
 def process_data(data):
@@ -114,8 +113,7 @@ Use `start_trace()` to programmatically set a breakpoint and drop into the debug
 **Example Script (`app_with_trace.py`):**
 
 ```python
-# Assuming 'ai_debugger.py' is in your Python path
-from ai_debugger import start_trace
+from cognitrace import start_trace
 from typing import Dict, Any
 
 def configure_system(settings: Dict[str, Any]):
