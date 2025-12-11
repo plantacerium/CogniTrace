@@ -20,6 +20,12 @@ Automated Crash Analysis (Post-Mortem): The handle_crash() function allows the d
 
 Context-Safe State Summarization: It intelligently summarizes large or complex data structures using reprlib and a configurable MAX_VAR_LEN, ensuring that massive variables don't exceed the LLM's context window, which is a critical failure point for other LLM-assisted tools.
 
+## Dependencies
+
+```bash
+pip install requests
+```
+
 ## Key Advantages
 ⚡️ 10x Faster Root Cause Analysis: Ask the debugger why instead of just what. Get direct answers like, "The ZeroDivisionError is on line 12 because the threshold variable remained 0, as none of the data_points exceeded 100."
 
